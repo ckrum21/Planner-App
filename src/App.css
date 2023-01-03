@@ -1,3 +1,20 @@
+
+
 .App {
 	text-align: center;
+	background-color: #99b6df ;
+	
+}
+
+button {
+	background-color: #478ac7;
+	color: white;
+}
+
+input {
+	background-color: #478ac7;
+	color: white;
+}
+::placeholder {
+	color: white;
 }

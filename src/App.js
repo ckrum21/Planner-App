@@ -21,22 +21,7 @@ const localizer = dateFnsLocalizer({
 });
 
 const events = [
-    {
-        title: "Big Meeting",
-        allDay: true,
-        start: new Date(2021, 6, 0),
-        end: new Date(2021, 6, 0),
-    },
-    {
-        title: "Vacation",
-        start: new Date(2021, 6, 7),
-        end: new Date(2021, 6, 10),
-    },
-    {
-        title: "Conference",
-        start: new Date(2021, 6, 20),
-        end: new Date(2021, 6, 23),
-    },
+
 ];
 
 function App() {
@@ -75,7 +60,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Calendar</h1>
+            <h1>Planner App</h1>
             <h2>Add New Event</h2>
             <div>
                 <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
