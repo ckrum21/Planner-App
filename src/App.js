@@ -57,6 +57,8 @@ function App() {
         
         setAllEvents([...allEvents, newEvent]);
     }
+    const updateRouter = require('./routes/update-route');
+    app.use('/', updateRouter);
 
     return (
         <div className="App">
@@ -69,6 +71,9 @@ function App() {
                 <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
                     Add Event
                 </button>
+                <form action="/user/edit/<%=userData.id %>" method="POST"></form>
+                <label>New Event</label>
+                <td><a href="/edit/<%=data.id%>">Edit</a></td>
             </div>
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>
