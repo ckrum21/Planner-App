@@ -1,11 +1,26 @@
-const mongoose = require("mongoose");
+const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
-const EventSchema = mongoose.Schema({
-    start: Date,
-    end: Date,
-    title: String
-})
+const eventSchema = new Schema({
+    eventStart:{
+        type: Date,
+    },
+    eventEnd:{
+        type: Date,
+    },
+    eventTitle:{
+        type: String
+    },
+    eventAuthor:{
+        type: String
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+      },
+});
 
-const Event = mongoose.model("Event", EventSchema);
+const Event = model('Event', eventSchema);
 
 module.exports = Event;
