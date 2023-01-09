@@ -25,35 +25,8 @@ const events = [
 
 function Planner() {
     const [newEvent, setNewEvent] = ({ title: "", start: "", end: "" });
-    
     const [allEvents, setAllEvents] = (events);
-
-    handleCloseAdd = () => this.setState({showAdd: false});
-    handleCloseEdit = () => this.setState({showEdit: false});
-    handleShowEdit = ({_id, start, end}) => this.setState({eventid: _id, start: start, end: end, showEdit: true});
-
-    const editEvent = (event) => {
-        setIsLoading(true)
-        setShowingEventForm({ visible: false })
     
-        setTimeout(() => {
-          const parsedEvent = parseEvents([event])
-          
-          const updatedEvents = [...events].map(updatedEvent => {
-            return updatedEvent.id === event.id ? parsedEvent[0] : updatedEvent
-          })
-    
-          setEvents(updatedEvents)
-          setIsLoading(false)
-          showFeedback({ message: "Event edited successfully", type: "success" })
-        }, MOCK_LOADING_TIME)
-      }
-
-
-
-
-
-
     function handleAddEvent() {
         
         for (let i=0; i<allEvents.length; i++){
