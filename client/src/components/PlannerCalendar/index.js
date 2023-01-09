@@ -59,6 +59,15 @@ function PlannerCalendar() {
       
       setAllEvents([...allEvents, newEvent]);
   }
+  function handleUpdateEvent () {
+
+  };
+
+  function handleDeleteEvent() {
+
+  };
+
+
 
   return (
     <div className="PlannerCalendar">
