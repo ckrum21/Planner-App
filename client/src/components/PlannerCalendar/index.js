@@ -79,7 +79,7 @@ function PlannerCalendar() {
         </>
         ): (
           <p>
-          Welcome to the Planner App! Please{' '}
+          Welcome to The Big Event! Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
         )} 
