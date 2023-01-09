@@ -26,7 +26,7 @@ const events = [
 function Planner() {
     const [newEvent, setNewEvent] = ({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = (events);
-
+    
     function handleAddEvent() {
         
         for (let i=0; i<allEvents.length; i++){

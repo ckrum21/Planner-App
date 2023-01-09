@@ -70,8 +70,14 @@ function PlannerCalendar() {
                 <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px"}} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
                 <DatePicker placeholderText="Start Date" style={{ marginRight: "10px"  }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
                 <DatePicker placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
-                <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+                <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
                     Add Event
+                </button>
+                <button style={{ marginTop: "10px" }} onClick={handleUpdateEvent}>
+                    Update Event
+                </button>
+                <button style={{ marginTop: "10px" }} onClick={handleDeleteEvent}>
+                    Delete Event
                 </button>
                 
             </div>
@@ -80,10 +86,12 @@ function PlannerCalendar() {
         ): (
           <div>
           <p>
+
           Welcome to The Big Event! </p>
           
           <p>Your personal 2023 planner</p>
           <p>Please{' '}
+
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
         </div>
