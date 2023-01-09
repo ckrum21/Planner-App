@@ -388,6 +388,7 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
+  color: white;
 }
 
 h5 {
@@ -399,9 +400,10 @@ h6 {
 }
 
 p {
-  font-size: 1.1rem;
-  margin: 0 0 1rem;
+  font-size: 3.0rem;
+  /*margin: 0 0 1rem;*/
   line-height: 1.5;
+  text-align: center;
 }
 
 ul,
@@ -915,16 +917,16 @@ a:hover {
 }
 
 .text-link {
-  color: #1b89bc !important;
+  color: #e4edf1 !important;
 }
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background-color: #2f88b8 !important;
 }
 
 .bg-info {
-  background-color: #1bbc9b !important;
+  background-color: #1262b3 !important;
 }
 
 .bg-danger {
@@ -949,6 +951,10 @@ a:hover {
 
 .bg-link {
   background-color: #1b89bc !important;
+}
+
+.bg-secondary {
+  background-color: #2f88b8 !important ;
 }
 
 /* DISPLAY */
@@ -1030,7 +1036,7 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #1d69b5;
   color: #ffffff;
 }
 
